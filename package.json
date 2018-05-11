@@ -1,7 +1,7 @@
 {
   "name": "ci-ruby",
   "organization": "alienfast",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "This is here for versioning and tool usage",
   "repository": {
