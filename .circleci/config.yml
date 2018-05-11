@@ -15,20 +15,6 @@ save_yarn_cache: &save_yarn_cache
       - node_modules/
       - ~/.cache/yarn/v1
 
-#restore_docker_cache: &restore_docker_cache
-#  restore_cache:
-#    name: Restore docker layer cache
-#    keys:
-#      - v1-dockerlayers-{{ .Branch }}
-#      - v1-dockerlayers-master
-#      - v1-dockerlayers-
-#
-#save_docker_cache: &save_docker_cache
-#  save_cache:
-#    name: Save docker layer cache
-#    key: v1-dockerlayers-{{ .Branch }}-{{ epoch }}
-#    paths:
-#      - /tmp/docker-cache
 jobs:
   build:
     branches:
@@ -41,17 +27,15 @@ jobs:
     - add_ssh_keys
     - setup_remote_docker
     - <<: *restore_yarn_cache
-#    - <<: *restore_docker_cache
     - run: ncu -a
-    - run: yarn
+    - run: yarn install
     - <<: *save_yarn_cache
     - deploy:
         command: |
           if [ "${CIRCLE_BRANCH}" == "develop" ];
             then yarn run buildDockerAutoRelease;
           fi
-        shell: /bin/bash
 #    - <<: *save_docker_cache
-    working_directory: ~/image
+    working_directory: ~/runtime-ruby
 version: 2
 
