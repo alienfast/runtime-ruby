@@ -35,7 +35,6 @@ jobs:
           if [ "${CIRCLE_BRANCH}" == "develop" ];
             then yarn run buildDockerAutoRelease;
           fi
-#    - <<: *save_docker_cache
-    working_directory: ~/runtime-ruby
+    working_directory: ~/image
 version: 2
 
