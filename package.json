@@ -1,0 +1,21 @@
+{
+  "name": "ci-ruby",
+  "organization": "alienfast",
+  "version": "1.0.0",
+  "private": true,
+  "description": "This is here for versioning and tool usage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alienfast/ci-ruby.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alienfast/ci-ruby/issues"
+  },
+  "engines": {
+    "node": ">=7"
+  },
+  "devDependencies": {
+    "@alienfast/build": "^4.0.145"
+  }
+}
