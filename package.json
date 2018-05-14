@@ -1,16 +1,16 @@
 {
-  "name": "ci-ruby",
+  "name": "runtime-ruby",
   "organization": "alienfast",
   "version": "1.0.1",
   "private": true,
   "description": "This is here for versioning and tool usage",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alienfast/ci-ruby.git"
+    "url": "https://github.com/alienfast/runtime-ruby.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/alienfast/ci-ruby/issues"
+    "url": "https://github.com/alienfast/runtime-ruby/issues"
   },
   "engines": {
     "node": ">=7"
