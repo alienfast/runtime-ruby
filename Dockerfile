@@ -30,10 +30,6 @@ RUN apt-get update -qq \
     && make install \
     && ldconfig \
     \
-    && apt-get autoremove -y \
-    automake \
-    curl \
-    build-essential \
     && apt-get autoclean -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
