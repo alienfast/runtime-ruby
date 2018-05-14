@@ -17,6 +17,7 @@ save_yarn_cache: &save_yarn_cache
 
 jobs:
   build:
+    resource_class: large
     branches:
       ignore:
       - master
